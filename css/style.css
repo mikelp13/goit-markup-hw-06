@@ -190,7 +190,7 @@ h6 {
 
 .contacts-logo {
   margin-right: 10px;
-  fill: var(--svg-icons-color);
+  fill: var(--text-color);
 
   transition: fill 250ms var(--timing-function);
 }
@@ -395,7 +395,7 @@ h6 {
 .social-links-list__link:hover {
   background-color: var(--accent-color);
   border-radius: 50%;
-  --color4: var(--primary-white-color);
+  --color5: var(--primary-white-color);
 }
 /* CLIENTS SECTION */
 .clients {
@@ -489,6 +489,15 @@ h6 {
   border-radius: 50%;
 }
 
+.close-icon {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* FOOTER */
 .footer {
   padding-top: 60px;
@@ -511,9 +520,8 @@ h6 {
 }
 
 .footer-links__title {
-  margin-top: 0;
+  display: block;
   margin-bottom: 20px;
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -521,7 +529,7 @@ h6 {
 }
 
 .social-links-list__link--color {
-  --color4: var(--primary-white-color);
+  --color5: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
