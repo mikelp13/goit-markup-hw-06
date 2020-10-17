@@ -169,7 +169,7 @@ h6 {
   content: '';
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
@@ -523,7 +523,6 @@ h6 {
 }
 
 .form__label {
-  display: block;
   margin-bottom: 4px;
 }
 
@@ -538,9 +537,6 @@ h6 {
   position: absolute;
   top: 33px;
   left: 15px;
-}
-.form__field {
-  margin-bottom: 20px;
 }
 
 .form__comment {
@@ -561,25 +557,58 @@ h6 {
   color: var(--placeholder-color);
 }
 
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 .form__text {
+  display: flex;
+  justify-content: space-evenly;
   margin-bottom: 30px;
+  outline: 3px solid indianred;
 }
 
 .form__link {
   font-size: 14px;
   line-height: 1.71;
   color: var(--accent-color);
+  outline: 1px solid goldenrod;
 }
 
 .form__agreement {
+  display: inline-flex;
   margin-left: 7px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
+  outline: 1px solid green;
 }
+
+.form__agreement::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  background-image: url('../images/uncheck.svg');
+  background-color: var(--primary-white-color);
+  align-self: center;
+}
+
+.form__checkbox:checked + .form__agreement::before {
+  background-image: url('../images/check.svg');
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .form__button {
   display: block;
   margin: 0 auto;
+}
+
+.form__checkbox {
+  appearance: none;
+  position: absolute;
 }
 
 /*========================= FOOTER =========================  */
