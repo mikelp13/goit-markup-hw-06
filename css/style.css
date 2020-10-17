@@ -7,7 +7,7 @@
   --text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --footer-contact-text: rgba(255, 255, 255, 0.6);
+  --footer-text: rgba(255, 255, 255, 0.6);
   --header-border-color: #ececec;
   --border-color: #eeeeee;
   --clients-border-color: #afb1b8;
@@ -73,6 +73,25 @@ h6 {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
+  border-radius: 4px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* NAVIGATION */
@@ -229,25 +248,6 @@ h6 {
   color: var(--primary-white-color);
 }
 
-.hero__button {
-  display: inline-block;
-  padding: 10px 32px;
-  min-width: 200px;
-  border-radius: 4px;
-  border: none;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-decoration: none;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
 /* FEATURES SECTION */
 
 .features {
@@ -373,7 +373,7 @@ h6 {
   justify-content: center;
 }
 
-.social-links-list__item {
+.social-links-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -508,6 +508,9 @@ h6 {
 .footer-wrapper {
   display: flex;
 }
+.footer-container {
+  margin-right: 70px;
+}
 
 .footer__studio-logo {
   display: inline-block;
@@ -516,10 +519,10 @@ h6 {
 
 .footer-links {
   margin-top: 12px;
-  margin-left: 70px;
+  margin-right: 93px;
 }
 
-.footer-links__title {
+.slogan {
   display: block;
   margin-bottom: 20px;
   font-size: 14px;
@@ -544,12 +547,51 @@ h6 {
   font-style: normal;
   text-decoration: none;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-text);
 }
 
 .studio-logo__item--inverse,
 .address__list-link--color {
   color: var(--primary-white-color);
+}
+
+.footer-form {
+  margin-top: 12px;
+}
+
+.subscribe-form__title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.subscribe-form__field {
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+
+  color: var(--footer-text);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-form__button {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 28px;
+  text-align: left;
+}
+
+.subscribe-form__logo {
+  position: absolute;
+  top: 13px;
+  right: 28px;
 }
 
 /*=============== PORTFOLIO PAGE =============== */
