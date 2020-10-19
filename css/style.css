@@ -491,6 +491,7 @@ h6 {
   background-color: var(--primary-white-color);
   border: 1px solid var(--close-btn-color);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .close-icon {
